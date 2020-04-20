@@ -3,15 +3,19 @@ package br.com.liandro.workshopmongo.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.util.Objects;
 
+@Document(collection = "user")
 @NoArgsConstructor
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
     @Getter @Setter
     private String id;
     @Getter @Setter

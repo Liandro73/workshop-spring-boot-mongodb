@@ -2,7 +2,7 @@
 
 Objetivo geral:
 
-*1 - Compreender as principais diferenças entre paradigma orientado a documentos e relacional*
+*1 - Compreender as principais diferenças entre o paradigma orientado a documentos e relacional*
 
 *2 - Implementar operações de CRUD*
 
@@ -13,5 +13,5 @@ Objetivo geral:
         Objetos aninhados
         Referências
 
-*5 - PRealizar consultas com Spring Data e MongoRepository*
+*5 - Realizar consultas com Spring Data e MongoRepository*
 
