@@ -10,8 +10,8 @@ Objetivo geral:
 
 *4 - Implementar associações entre objetos*
 
-        *Objetos aninhados*
-        *Referências*
+        Objetos aninhados
+        Referências
 
 *5 - PRealizar consultas com Spring Data e MongoRepository*
 
