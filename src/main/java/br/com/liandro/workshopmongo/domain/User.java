@@ -18,8 +18,10 @@ public class User implements Serializable {
     @Id
     @Getter @Setter
     private String id;
+
     @Getter @Setter
     private String name;
+
     @Getter @Setter
     private String email;
 
