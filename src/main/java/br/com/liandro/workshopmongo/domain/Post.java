@@ -1,6 +1,7 @@
 package br.com.liandro.workshopmongo.domain;
 
 import br.com.liandro.workshopmongo.dto.AuthorDTO;
+import br.com.liandro.workshopmongo.dto.CommentDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,30 +9,27 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Document(collection = "post")
 @NoArgsConstructor
+@Getter @Setter
 public class Post implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Getter @Setter
     private String id;
-
-    @Getter @Setter
     private Date date;
-
-    @Getter @Setter
     private String title;
-
-    @Getter @Setter
     private String body;
 
-    @Getter @Setter
     private AuthorDTO author;
+
+    private List<CommentDTO> comments = new ArrayList<>();
 
     public Post(String id, Date date, String title, String body, AuthorDTO author) {
         this.id = id;

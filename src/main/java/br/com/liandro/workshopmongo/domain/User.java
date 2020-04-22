@@ -14,22 +14,17 @@ import java.util.Objects;
 
 @Document(collection = "user")
 @NoArgsConstructor
+@Getter @Setter
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Getter @Setter
     private String id;
-
-    @Getter @Setter
     private String name;
-
-    @Getter @Setter
     private String email;
 
     @DBRef(lazy = true)
-    @Getter @Setter
     private List<Post> posts = new ArrayList<>();
 
     public User(String id, String name, String email) {
