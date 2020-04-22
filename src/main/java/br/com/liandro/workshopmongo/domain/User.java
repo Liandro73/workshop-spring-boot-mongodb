@@ -4,9 +4,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Document(collection = "user")
@@ -24,6 +27,10 @@ public class User implements Serializable {
 
     @Getter @Setter
     private String email;
+
+    @DBRef(lazy = true)
+    @Getter @Setter
+    private List<Post> posts = new ArrayList<>();
 
     public User(String id, String name, String email) {
         this.id = id;
